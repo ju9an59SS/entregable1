@@ -1,0 +1,286 @@
+:root {
+    --header-height: 60px;
+}
+
+body,
+html {
+    font-family: 'roboto_condensed_light';
+    width: 100%;
+    height: 100%;
+    background-color: rgb(224, 223, 167);
+    color: var(--bs-black);
+    font-size: 16px;
+}
+
+.full-box {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.div-bordered {
+    border: 1px solid #E1E1E1;
+}
+
+.header,
+.header-brand,
+.header-options,
+.header-navbar,
+.header-button {
+    height: var(--header-height);
+    transition: all .3s ease-in-out;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: rgb(165, 140, 98);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    position: relative;
+    color: var(--bs-black);
+}
+
+.header-brand,
+.header-options {
+    position: absolute;
+    top: 0;
+}
+
+.header-brand {
+    width: 25%;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.header-brand img {
+    margin-top: 4px;
+    max-width: calc(var(--header-height) - 8px);
+}
+
+.header-options {
+    width: 75%;
+    right: 0;
+    padding-right: 20px;
+    text-align: right;
+}
+
+.header-navbar {
+    display: inline-block;
+    width: auto;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.header-navbar ul,
+.header-navbar ul li,
+.header-navbar ul li a {
+    width: auto;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.header-navbar ul li,
+.header-navbar ul li a,
+.header-button,
+.header-button>i {
+    display: inline-block;
+    height: var(--header-height);
+    line-height: var(--header-height);
+    transition: all .3s ease-in-out;
+    position: relative;
+}
+
+.header-button>i {
+    cursor: pointer;
+    width: 100%;
+}
+
+.header-navbar ul li a {
+    padding: 0 15px;
+}
+
+.header-navbar ul li a:hover,
+.header-button:hover {
+    text-decoration: none;
+    color: #F93154;
+}
+
+.header-navbar ul li a span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+    height: 5px;
+    transition: all .3s ease-in-out;
+}
+
+.header-navbar ul li a:hover span {
+    background-color: #F93154;
+}
+
+.header-button {
+    width: calc(var(--header-height) - calc(var(--header-height) / 4));
+}
+
+.header-navbar ul li a,
+.header-button {
+    font-size: calc(var(--header-height) / 3.5);
+    color: var(--bs-black);
+}
+
+.bag-count {
+    position: absolute;
+    top: calc(var(--header-height) - (var(--header-height) / 1.2));
+    right: 0;
+}
+
+
+/* Estilos cards*/
+
+.container-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container-cards .card {
+    width: 300px;
+    min-width: 300px;
+    margin: 10px 15px;
+}
+
+.container-cards .card:hover {
+    text-decoration: none;
+}
+
+.container-cards .card .card-img-top {
+    height: 200px;
+}
+
+
+/* Estilos carrito de compras */
+
+.container-cart {
+    min-height: calc(100vh - var(--header-height));
+    padding-bottom: 30px;
+}
+
+.bag-item>figure,
+.bag-item>div {
+    display: inline-block;
+}
+
+.bag-item>figure {
+    width: 90px;
+    height: 90px;
+}
+
+.bag-item>div {
+    width: calc(100% - 94px);
+}
+
+.bag-details .list-group-item {
+    border-color: transparent;
+    color: var(--accent-color);
+}
+
+
+/* Estilos detalles de plato */
+
+.galery-details figure {
+    width: 100px;
+    height: 100px;
+    margin: 15px;
+    display: inline-block;
+}
+
+.galery-details figure a,
+.galery-details figure img {
+    width: 100%;
+    height: 100%;
+}
+
+.fa-thermometer-three-quarters:before {
+    content: "\f2c8";
+}
+
+.fa-trash-alt:before {
+    content: "\f2ed";
+}
+
+.fa-tv:before {
+    content: "\f26c";
+}
+
+.far {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 400;
+}
+
+.fa-shopping-bag:before {
+    content: "\f290";
+}
+
+.fa-sync-alt:before {
+    content: "\f2f1";
+}
+
+@font-face {
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 900;
+    font-display: block;
+    src: url("../webfonts/fa-solid-900.eot");
+    src: url("../webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-solid-900.woff2") format("woff2"), url("../webfonts/fa-solid-900.woff") format("woff"), url("../webfonts/fa-solid-900.ttf") format("truetype"), url("../webfonts/fa-solid-900.svg#fontawesome") format("svg");
+}
+
+.fa,
+.fas {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+*,
+:after,
+:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+@media(prefers-reduced-motion:no-preference) {
+     :root {
+        scroll-behavior: smooth
+    }
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2
+}
+
+@media(min-width:1200px) {
+    .h3,
+    h3 {
+        font-size: 1.75rem
+    }
+}
+
+.h4,
+h4 {
+    font-size: calc(1.275rem + .3vw)
+}
